@@ -58,7 +58,31 @@
 
 ### <span id="heap">Heap</span>
 
+**Binary heaps**  
+The major difference between [linked list](#linkedlist) and binary heap is that nodes in binary heaps have 2 child nodes whereas linked list is a list of nodes *serially connected to one after another; every node is connected to exactly one node.*
+
+**Min heap**
+  - Every parent node has a value that is smaller that that of its child nodes. Starting from top to bottom, the values increase. In other words, the root holds the minimum value. 
+    - `parent` < `child`
+  - Key operations
+    - `insert`
+    - `delete`
+
+**Max heap**
+  - Advantage: `MaxHeap` is fast.
+    - `insert` in O(log n)
+    - `get max` in O(1)
+    - `remove max` in O(log n)
+  - `parent` > `child`
+  - Easy to implement using an array.
+    - `MaxHeap` operations
+      - `push (insert)`: add value to end of the array. float it up to the proper position. 
+      - `peek (get max)`: return the value at heap[1].
+      - `pop (remove max)`: move max to end of array. delete it. buble down the item at index 1 to the proper position. Return `max`
+      
+  **Learning materials**
   - Joe James (2015) Python: MaxHeap heapsort https://www.youtube.com/watch?v=GnKHVXv_rlQ&ab_channel=JoeJames
+  - Spanning Tree (20200 What Is a Binary Heap? https://www.youtube.com/watch?v=AE5I0xACpZs&ab_channel=SpanningTree
 
 <br>
 
